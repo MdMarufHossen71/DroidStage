@@ -1,0 +1,68 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Node
+node_modules/
+dist/
+coverage/
+.vite/
+
+# Build / runtime output
+build/
+release/
+artifacts/
+logs/
+*.log
+*.tmp
+*.part
+*.pid
+*.sock
+
+# Android / emulator / user data
+.android/
+.avd/
+android-sdk/
+platform-tools/
+system-images/
+*.apk
+*.aab
+*.apks
+*.xapk
+*.obb
+*.img
+*.qcow2
+*.vhd
+*.vhdx
+*.userdata
+*.lock
+
+# Local app state
+.data/
+.local/
+DroidStage-data/

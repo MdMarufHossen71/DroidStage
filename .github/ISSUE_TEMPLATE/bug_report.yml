@@ -1,0 +1,63 @@
+name: Bug report
+description: Report a reproducible problem in DroidStage.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not attach APKs, private logs, device serial numbers, credentials, or personal data. Redact sensitive information."
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: A clear description of the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Open...\n2. Connect...\n3. Click..."
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: DroidStage version or commit
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+  - type: input
+    id: ram
+    attributes:
+      label: PC RAM
+  - type: input
+    id: cpu
+    attributes:
+      label: CPU model
+  - type: input
+    id: device
+    attributes:
+      label: Android device model (do not include serial number)
+  - type: input
+    id: android
+    attributes:
+      label: Android version
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant redacted logs
+      description: Remove serial numbers, usernames, paths containing personal information, and tokens.
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior

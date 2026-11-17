@@ -1,0 +1,37 @@
+name: Feature request
+description: Suggest a feature or improvement.
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem should this solve?
+      description: Describe the user problem, not only the proposed solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Which mode does this affect?
+      options:
+        - Physical Device Bridge
+        - Local Virtual Android
+        - Both
+        - Documentation / developer experience
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
