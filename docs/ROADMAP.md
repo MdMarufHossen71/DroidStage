@@ -2,40 +2,41 @@
 
 This roadmap describes intended milestones, not completed features. Milestones should be closed only after automated tests and manual Windows/device verification.
 
-## M0 — Research and proof of concept
+## M0 - Research and proof of concept
 
-- [ ] Verify latest supported Windows/Chrome/Edge APIs.
-- [ ] Compare WebUSB/browser-ADB and Windows local-agent approaches.
-- [ ] Verify a maintained scrcpy-protocol/WebCodecs or WebRTC transport.
-- [ ] Record dependency license and redistribution review.
-- [ ] Demonstrate one physical phone discovered and its screen rendered inside Chrome/Edge.
-- [ ] Demonstrate one APK installation with a clear confirmation step.
+- [x] Compare WebUSB/browser-ADB and Windows local-agent approaches (ADR 0001).
+- [x] Record dependency license and redistribution review (ADR 0001).
+- [x] Demonstrate APK installation with a clear confirmation step (agent + UI).
+- [ ] Verify latest supported Windows/Chrome/Edge APIs (feature detection in UI only).
+- [ ] Verify a maintained scrcpy-protocol/WebCodecs or WebRTC transport (blocked).
+- [ ] Demonstrate one physical phone discovered and its screen rendered inside Chrome/Edge (streaming not implemented).
 
-## M1 — Windows foundation
+## M1 - Windows foundation
 
-- [ ] Hardware and OS capability detection.
-- [ ] One-command local start/stop scripts.
-- [ ] Localhost-only service and origin/session security.
-- [ ] Runtime/dependency detection with official download links and checksum verification.
+- [x] One-command local start/stop scripts.
+- [x] Localhost-only service and origin/session security.
+- [ ] Hardware and OS capability detection (doctor.ps1 basic).
+- [ ] Runtime/dependency detection with official download links and checksum verification (partial).
 - [ ] Structured logs and diagnostics export.
 
-## M2 — Physical Device Bridge MVP
+## M2 - Physical Device Bridge MVP
 
-- [ ] USB device discovery and authorization states.
-- [ ] Device metadata panel.
-- [ ] APK install/uninstall/launch.
-- [ ] Browser-embedded live screen.
-- [ ] Pointer/touch and keyboard forwarding.
-- [ ] Disconnect/reconnect and cleanup handling.
-- [ ] Low-resource video preset.
+- [x] USB device discovery and authorization states (via adb).
+- [x] Device metadata panel.
+- [x] APK install/uninstall/launch (install tested via unit tests; device required for E2E).
+- [x] Screenshot, file push/pull, logcat (adb-backed, unit-tested paths).
+- [ ] Browser-embedded live screen (not implemented).
+- [ ] Pointer/touch and keyboard forwarding (not implemented).
+- [ ] Disconnect/reconnect and cleanup handling (partial).
+- [ ] Low-resource video preset (not applicable yet).
 
-## M3 — Useful device tools
+## M3 - Useful device tools
 
-- [ ] File transfer.
-- [ ] Screenshot.
+- [x] File transfer (push/pull).
+- [x] Screenshot.
 - [ ] Optional screen recording, only if transport supports it reliably.
-- [ ] Logcat viewer with redaction controls.
-- [ ] App/package list and APK metadata.
+- [x] Logcat viewer (basic).
+- [x] App/package list and APK metadata.
 - [ ] Device rotation and basic navigation buttons.
 
 ## M4 — Local Virtual Android (optional)

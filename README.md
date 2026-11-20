@@ -4,7 +4,7 @@
 
 DroidStage is planned as a local-first Windows application that gives users a browser-based workspace for connecting Android devices, installing and managing APKs, viewing and controlling a device, and (as an optional advanced mode) running a local Android Virtual Device.
 
-> **Project status: pre-alpha / project scaffold.** This repository currently contains the project specification and development guidance. The application is not implemented yet. Do not treat planned features as working software.
+> **Project status: pre-alpha.** A first vertical slice is implemented: local agent + browser UI for physical Android device discovery and APK install. Live browser-embedded screen streaming is **not** implemented yet (see docs/adr/0001-physical-device-transport.md).
 
 ## The core idea
 
@@ -64,6 +64,19 @@ The application is not ready to run yet. Once an MVP release is published, the i
 6. Select the device in DroidStage and install an APK after reviewing its source and requested permissions.
 
 For development setup and the first implementation task, see [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) and [docs/OPENCODE_BOOTSTRAP_PROMPT.md](docs/OPENCODE_BOOTSTRAP_PROMPT.md).
+
+## Running the current vertical slice
+
+1. Install Node.js LTS and Python 3.12+.
+2. Install agent dependencies: `pip install -r apps/agent/requirements.txt`
+3. Install web dependencies: `cd apps/web && npm install`
+4. (Optional) Install Android platform-tools and add `adb` to PATH.
+5. Start: `./Start-DroidStage.ps1` (or `Start-DroidStage.bat`).
+6. Open the printed `http://127.0.0.1:8787/?token=...` URL in Chrome/Edge.
+
+Tests:
+- Python: `cd apps/agent && python -m pytest`
+- Web: `cd apps/web && npm test && npm run build`
 
 ## Architecture overview
 

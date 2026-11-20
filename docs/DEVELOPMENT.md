@@ -11,13 +11,19 @@ The application implementation has not started. The coding agent should choose a
 - Python 3.12+ only if the chosen local agent uses Python.
 - No Android Studio IDE and no Docker dependency.
 
-## First development session
+## Running the implemented vertical slice
 
-1. Install Git and Node.js LTS if missing.
-2. Install Python only if the selected backend requires it.
-3. Open this repository folder in OpenCode.
-4. Paste the full instructions from [OPENCODE_BOOTSTRAP_PROMPT.md](OPENCODE_BOOTSTRAP_PROMPT.md).
-5. Let the agent inspect the current repository, verify technical choices against official documentation and maintained upstream projects, implement the first vertical slice, and run tests.
+1. Install Node.js LTS and Python 3.12+.
+2. `cd apps/agent && python -m pip install -r requirements.txt`
+3. `cd apps/web && npm install`
+4. Install Android platform-tools and ensure `adb` is on PATH (optional for discovery).
+5. Start: `./Start-DroidStage.ps1`
+6. Stop: `./Stop-DroidStage.ps1`
+
+Checks:
+- `cd apps/agent && python -m pytest`
+- `cd apps/web && npm test && npm run build`
+- `cd apps/web && npm run lint`
 
 ## Local conventions
 
